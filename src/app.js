@@ -11,11 +11,11 @@ app.use(express.json()) //executa o json no express
 
 //usar as rotas
 const index = require("./routes/index")
-//const branch = require("./routes/branch.routes")
+const branch = require("./routes/branch.routes")
 const market = require("./routes/market.routes")
 
 app.use("/", index)
-//app.use("/branch", branch)
+app.use("/branch", branch)
 app.use("/market", market)
 
 module.exports = app
