@@ -6,6 +6,14 @@ const marketSchema = new mongoose.Schema({
         type: String,
         require: true
     },
+    niche: {
+        type: String,
+        require: true
+    },
+    city: {
+        type: String,
+        require: true
+    },
     createdIn: {
         type: Date,
         require: true,

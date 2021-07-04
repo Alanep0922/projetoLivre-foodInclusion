@@ -10,12 +10,11 @@ const createBranch = async (req, res) => {
     const branch = new Branch({
         _id: new mongoose.Types.ObjectId(),
         name: req.body.name,
-        niche: req.body.niche,
         description: req.body.description,
         market: req.body.market,
     })
     const existingBranch = await Branch.findOne({ name: req.body.name })
-    if (existingBranch) { 
+    if (existingBranch) {
         return res.status(409).json({ error: "Ramo de negócio já cadastrado!" })
     }
     try {
@@ -26,11 +25,6 @@ const createBranch = async (req, res) => {
             message: error.message
         })
     }
-}
-const branchByMarket = async (req, res) => {
-
-// Pesquisar por ramo de negócio? restaurantes, feiras e mercados!
-
 }
 const replaceBranch = async (req, res) => {
 
@@ -85,7 +79,6 @@ const deleteBranch = async (req, res) => {
 module.exports = {
     showBranch,
     createBranch,
-    branchByMarket,
     replaceBranch,
     deleteBranch
 }

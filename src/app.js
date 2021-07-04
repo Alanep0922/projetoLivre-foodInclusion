@@ -15,6 +15,7 @@ const branch = require("./routes/branch.routes")
 const market = require("./routes/market.routes")
 
 app.use("/", index)
+
 app.use("/branch", branch)
 app.use("/market", market)
 

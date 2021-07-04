@@ -6,10 +6,6 @@ const branchSchema = new mongoose.Schema({
         type: String,
         require: true
     },
-    niche: {
-        type: Array,
-        require: true
-    },
     description: {
         type: String,
         require: true

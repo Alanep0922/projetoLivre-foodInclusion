@@ -5,9 +5,6 @@ const controller = require("../controllers/branch.controller")
 //Ler todos os ramos -> GET -> find() método
 router.get("/", controller.showBranch)
 
-//Ler todos os ramos de um negócio - GET -> find()
-router.get("/", controller.branchByMarket)
-
 //Criar um ramo -> POST -> save() método do mongo
 router.post("/", controller.createBranch)
 
