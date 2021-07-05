@@ -1,13 +1,13 @@
-const express = require("express") //chama o express
-const cors = require("cors") //chama o cors
-const app = express() //executa o express
+const express = require("express") 
+const cors = require("cors") 
+const app = express() 
 
-//conectar o db
-const db = require('./configs/database') //chamando o database
-db.connect() //conectado o db
+//conectando o db
+const db = require('./configs/database') 
+db.connect() 
 
-app.use(cors())//executa o cors
-app.use(express.json()) //executa o json no express
+app.use(cors())
+app.use(express.json()) 
 
 //usar as rotas
 const index = require("./routes/index")

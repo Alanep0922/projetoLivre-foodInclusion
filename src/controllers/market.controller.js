@@ -37,7 +37,7 @@ const showMarkets = async (req, res) => {
 const showMarketCity = async (req, res) => {
     try {
         const { city } = req.query
-        const market = await Market.findOne({city: city})
+        const market = await Market.find({city: city})
         if (market == undefined || city == " ") {
             return res.status(404).json({
                 message: "Não temos negócios cadastrados nesta cidade!"
@@ -63,7 +63,7 @@ const replaceMarket = async (req, res) => {
         market.niche = req.body.niche
     }
     if (req.body.city != null){
-        market.city = req.body.niche
+        market.city = req.body.city
     }
     try {
         const marketReplace = await market.save()

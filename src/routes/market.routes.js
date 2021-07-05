@@ -2,19 +2,19 @@ const express = require("express")
 const router = express.Router() 
 const controller = require("../controllers/market.controller")
 
-//create -> POST -> 
+//Criar um novo negócio -> POST
 router.post("/", controller.createMarket)
 
-//read -> GET -> 
+//Ler todos os negócios cadastrados -> GET 
 router.get("/", controller.showMarkets)
 
-//Ler todos os ramos de uma cidade - a partir da query
-router.get("/city", controller.showMarketCity) //branchByMarket
+//Ler todos os negócios de uma cidade - a parti da query -> GET
+router.get("/city", controller.showMarketCity) 
 
-//replace -> PUT ->
+//Atualizar/Substituir um negócio -> PUT 
 router.put("/:id", controller.replaceMarket)
 
-//delete -> DELETE -> 
+//Deletar um negócio -> DELETE
 router.delete("/:id", controller.deleteMarket)
 
 module.exports = router
