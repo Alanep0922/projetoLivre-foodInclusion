@@ -37,9 +37,6 @@ const replaceBranch = async (req, res) => {
     if (req.body.name != null) {
         branch.name = req.body.name
     }
-    if (req.body.niche != null) {
-        branch.niche = req.body.niche
-    }
     if (req.body.description != null) {
         branch.description = req.body.description
     }
