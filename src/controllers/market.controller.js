@@ -38,7 +38,7 @@ const showMarketCity = async (req, res) => {
     try {
         const { city } = req.query
         const market = await Market.find({city: city})
-        if (market == undefined || city == " ") {
+        if (market.length == 0 || city == " " || city == "") {
             return res.status(404).json({
                 message: "Não temos negócios cadastrados nesta cidade!"
             })
