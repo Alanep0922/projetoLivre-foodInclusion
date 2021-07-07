@@ -65,7 +65,7 @@ Esta API está sendo executada na `porta 3000` e para que todas as rotas possam 
 | Remoção de um negócio por id | DELETE | `/market/:id` |
 | Lista de ramos de negócios cadastrados | GET | `/branch` |
 | Cadastra um ramo de negócio na base de dados | POST | `/branch` |
-| Atualiza/substitui um ramo de negócio por id | PUT | `/branch` |
+| Atualiza/substitui um ramo de negócio por id | PUT | `/branch/:id` |
 | Remoção de um ramo de negócio por id | DELETE | `/branch/:id` |
 
 
