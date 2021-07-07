@@ -4,7 +4,6 @@
 ![badge license](https://img.shields.io/github/license/maaysiq/projeto-final?style=social)
 
 <h1 align="center">
-  <img src="img/foto1.jpg" alt="Inclusion" width="500" height="300">
   <p align="center">Projeto - FoodInclusion<p>
 </h1>
 
