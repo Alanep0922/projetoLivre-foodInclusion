@@ -3,15 +3,13 @@ const Branch = require("../models/branch")
 
 
 const showBranch = async (req, res) => {
-    const branches = await Branch.find().populate("market")
+    const branches = await Branch.find()
     return res.status(200).json(branches)
 }
 const createBranch = async (req, res) => {
     const branch = new Branch({
         _id: new mongoose.Types.ObjectId(),
-        name: req.body.name,
-        description: req.body.description,
-        market: req.body.market,
+        name: req.body.name
     })
     const existingBranch = await Branch.findOne({ name: req.body.name })
     if (existingBranch) {
@@ -36,12 +34,6 @@ const replaceBranch = async (req, res) => {
     }
     if (req.body.name != null) {
         branch.name = req.body.name
-    }
-    if (req.body.description != null) {
-        branch.description = req.body.description
-    }
-    if (req.body.market != null) {
-        branch.market = req.body.market
     }
     try {
         const branchReplace = await branch.save()

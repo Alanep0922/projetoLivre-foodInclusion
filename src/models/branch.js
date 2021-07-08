@@ -6,15 +6,6 @@ const branchSchema = new mongoose.Schema({
         type: String,
         require: true
     },
-    description: {
-        type: String,
-        require: true
-    },
-    market: {
-       type: mongoose.Schema.Types.ObjectId, 
-       require: true,
-       ref: "market" 
-    },
     createdIn: {
         type: Date,
         require: true,

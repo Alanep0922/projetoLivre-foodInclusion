@@ -6,7 +6,7 @@ const marketSchema = new mongoose.Schema({
         type: String,
         require: true
     },
-    niche: {
+    description: {
         type: String,
         require: true
     },
@@ -14,6 +14,11 @@ const marketSchema = new mongoose.Schema({
         type: String,
         require: true
     },
+    branch: {
+        type: mongoose.Schema.Types.ObjectId, 
+        require: true,
+        ref: "branch" 
+     },
     createdIn: {
         type: Date,
         require: true,

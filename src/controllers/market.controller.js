@@ -5,8 +5,9 @@ const createMarket = async (req, res) => {
     const market = new Market({
         _id: new mongoose.Types.ObjectId(),
         name: req.body.name,
-        niche: req.body.niche,
-        city: req.body.city
+        description: req.body.description,
+        city: req.body.city,
+        branch: req.body.branch,
     })
     const existingMarket = await Market.findOne({ name: req.body.name })
     if (existingMarket) {
@@ -26,7 +27,7 @@ const createMarket = async (req, res) => {
 }
 const showMarkets = async (req, res) => {
     try {
-        const martkets = await Market.find()
+        const martkets = await Market.find().populate("branch")
         return res.status(200).json(martkets)
     } catch (err) {
         return res.status(500).json({
@@ -59,11 +60,14 @@ const replaceMarket = async (req, res) => {
     if (req.body.name != null) {
         market.name = req.body.name
     }
-    if (req.body.niche != null) {
-        market.niche = req.body.niche
+    if (req.body.description != null) {
+        market.description = req.body.description
     }
     if (req.body.city != null){
         market.city = req.body.city
+    }
+    if (req.body.branch != null) {
+        market.branch = req.body.branch
     }
     try {
         const marketReplace = await market.save()

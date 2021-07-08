@@ -1,7 +1,4 @@
 [![Deploy on heroku](https://img.shields.io/badge/deploy-heroku.com-blueviolet)](https://foodinclusion.herokuapp.com/) 
-![badge node version](https://img.shields.io/badge/node-v12.18.3-brightgreen)
-![badge fork](https://img.shields.io/github/forks/maaysiq/projeto-final?style=social)
-![badge license](https://img.shields.io/github/license/maaysiq/projeto-final?style=social)
 
 <h1 align="center">
   <p align="center">Projeto - FoodInclusion<p>
@@ -9,95 +6,112 @@
 
 > API que lista negócios que fornecem e produzem produtos orgânicos e alimentos próprios para alérgicos, levando em consideração a contaminação cruzada.
 
-> Status: Em construção... 🚧 👷  
+> Status: Em construção... 🚧  
 
- ## 📚 **Sobre o Projeto**
+## Contrato
+<img src="https://ibb.co/TPgTqnR" alt="Apresentação" width="200">
 
- Os conceitos do projeto serão apresentados aos negócios especializados no ramo alimentício que é voltado para alérgicos/orgânicos, ou que queiram abrir o leque do público de modo que possa incentivar a inclusão alimentar desse grupo, considerando a relevância de uma porcentagem solidada da população mundial que são acometidas á restrições alimentares ou que simplesmente optam por alimentos mais saudáveis e que não prejudicam o meio ambiente em seu plantio e produção. 
+Acesse a apresentação do projeto no link abaixo: 
+https://www.canva.com/design/DAEjgrNJK8A/Wve7HcKbk0tN3hLU7NbbIA/view?utm_content=DAEjgrNJK8A&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink
 
- ### Metas do projeto
-1. Fortalecer a capacidade de busca de negócios certificados e seguros de uma determinada Cidade/Estado, que utilizam produtos que seguem a Rotulagem de Alimentos Alergênicos da Agência Nacional de Vigilância Sanitária (Anvisa) e que produzem alimentos e vegetais orgânicos.
-2. Desenvolver a competência  do alcance da API para apoiar seus membros criando uma ponte ao grupo de consumidores sensíveis, mediando com estratégias e promoções do negócio que atua neste ramo a partir deste Projeto. 
-3. Desenvolver modelos colaborativos entre as organizações parceiras da plataforma e assim fortalecê-las para ampliar a sua visibilidade e influenciarem a inclusão do setor especifico de consumo. 
+<br>
+<br>
+
+```
+## Sobre o Projeto
+
+O FoodInclusion é um sistema de gerenciamento de negócios voltados para o consumidor sensitivo.
+
+Esta aplicação é uma API onde será possível complilar e gerenciar negócios certificados e seguros que atuam no fornecimento, produção e manipulação de alimentos próprios para pessoas que possuem algum tipo de restrição alimentar, considerado as nuances da contaminação cruzada, além das opções orgânicas para os optantes de alimentos saudáveis. 
+
+A plataforma recebe o cadastro de negócios referenciando por ramo/nicho de atuação, utilizando-se do MongoDB como Banco de Dados NoSQL.  
+```
 
  ## 🚀 **Tecnologias e dependências**
+| Ferramenta | Descrição |
+| --- | --- |
+| `javascript` | Linguagem de programação |
+| `nodejs` | Ambiente de execução do javascript |
+| `express` | Framework NodeJS para construção de APIs Rest |
+| `dotenv` | Dependência para proteger dados sensíveis do projeto|
+| `nodemon` | Dependência que observa as atualizações realizadas nos documentos para rodar o servidor automaticamente|
+| `npm` | Gerenciador de pacotes|
+|`Postman ` | Interface gráfica para realizar os testes|
+| `MongoDb` | Banco de dado não relacional orientado a documentos|
+| `mongoose` | Dependência que interage com o MongoDB para a conexão da database, criação do model e das collections|
+| `MongoDb Compass` | Interface gráfica para realizar testes|
+| `MongoDb Atlas`| Banco de dados como serviço - na nuvem |
+|`Github` | Instrumento de versionamento de código|
+|`Heroku` |  Plataforma de hospedagem para aplicações back-end |
 
- [Git](https://git-scm.com/)
+<br>
+<br>
 
- [GitHub](https://github.com/)
+## 📁 Arquitetura MVC (Model-View-Controller)
 
- [NodeJS](https://nodejs.org/pt-br/) 
+```
+ 📁 PROJETOLIVRE-FOODINCLUSION
+   |
+   |-  📁 src
+   |    |
+   |    |- 📁 configs
+   |         |- 📄 database.js
+   |
+   |    |- 📁 controllers
+   |         |- 📄 branch.controller.js
+   |         |- 📄 market.controller.js
+   |
+   |    |- 📁 models
+   |         |- 📄 branch.js
+   |         |- 📄 market.js
+   |
+   |    |- 📁 routes
+   |         |- 📄 branch.routes.js 
+   |         |- 📄 market.routes.js 
+   |    | - 📄 app.js
+   |
+   |- 📄 .env
+   |- 📄 .env.example
+   |- 📄 .gitignore
+   |- 📄 LICENSE
+   |- 📄 package-lock.json
+   |- 📄 package.json
+   |- 📄 README.md
+   |- 📄 server.js
 
- [Nodemon](https://www.npmjs.com/package/nodemon)
-
- [Express](https://expressjs.com/pt-br/)
-
- [MongoDB](https://www.mongodb.com/)
-
- [Mongoose](https://mongoosejs.com/)
-
- [Dotenv-safe](https://www.npmjs.com/package/dotenv-safe)
-
-
-## 🔧 **Funcionalidades**
-
-- [X] Cadastro de negócios especializados; 
-- [X] Cadastro de ramo de negócios especializados;
-- [X] Lista de todos os  negócios cadastrados;
-- [X] Lista de todos os  ramos de um negócio;
-- [X] Lista de negócios por cidade;
-- [X] Atualiza/substitui negócios por ID;
-- [X] Atualiza/substitui ramo de negócio por ID;
-- [X] Remoção de negócios por ID;
-- [X] Remoção de ramo de negócio por ID;
-
-## 🎯 **Rotas HTTP**
-
-Esta API está sendo executada na `porta 3000` e para que todas as rotas possam ser acessadas localmente é necessário usar `http://localhost:3000/` antes dos endpoints de requisição.
-
-
-| Feature | Método | Rota |
-|---------|--------|------|
-| Lista de negócios | GET | `/market` |
-| Cadastra um negócio na base de dados | POST | `/market` |
-| Lista negócios por cidade por query | GET | `/market/city<city-nome-da-cidade>` |
-| Atualiza/substitui um negócio por id | PUT | `/market/:id` |
-| Remoção de um negócio por id | DELETE | `/market/:id` |
-| Lista de ramos de negócios cadastrados | GET | `/branch` |
-| Cadastra um ramo de negócio na base de dados | POST | `/branch` |
-| Atualiza/substitui um ramo de negócio por id | PUT | `/branch/:id` |
-| Remoção de um ramo de negócio por id | DELETE | `/branch/:id` |
-
+```
+<br>
+<br>
 
 ## 📌 **Instruções para instalação e contribuições no projeto**
 
-*Instalação*
+<br>
+<br>
 
- Clonar o repositório
-` git clone https://github.com/PrisRocha/projetoLivre-foodInclusion.git `
+## 🎯 **Rotas HTTP**
 
- Instalar as dependências
- ` npm install `
+### Dados para Collection market
 
- Renomeie `.env.example` para `.env` e adicione os valores das variáveis `PORT` (porta sugerida `3000`), `MONGODB_URI` (string de conexão com o banco de dados)
+- id: autogerada e obrigatória
+- name: texto e obrigatório
+- description: texto e obrigatório 
+- city: texto e obrigatório
+- branch: referencia do ramo de negócio cadastrado previamente obrigatório
+- createdIn: data gerada automaticamente e obrigatório
 
- Executar o servidor
- ` npm start `
+<br>
+<br>
 
-*Contribuição*
+### Dados para Collection branch
 
-Faça um `fork` do projeto 
+- _id: autogerado e obrigatório
+- name: texto e obrigatório
+- createdIn: data gerada automaticamente e obrigatório
 
-Crie uma branch para realizar suas alterações: `git checkout -b feature/nome-da-sua-branch`
+<br>
+<br>
 
-Commit suas alterações `git commit -m 'sua mensagem'`
-
-Suba o projeto no seu GitHub `git push origin feature/<sua_branch>`;
-
- Crie um novo _Pull Request_ com as contribuições para o projeto original.
-
-
----
-
-
-
+## Maria Priscila
+- [linkedin](https://www.linkedin.com/in/maria-priscila-c/)
+- [github](https://github.com/PrisRocha)
+```
