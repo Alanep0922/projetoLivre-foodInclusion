@@ -9,7 +9,7 @@
 > Status: Em construção... 🚧  
 
 ## Contrato
-<img src="https://ibb.co/TPgTqnR" alt="Apresentação" width="200">
+<a href="https://ibb.co/TPgTqnR"><img src="https://i.ibb.co/5sR9xzv/pexels-fauxels-3184183-2.jpg" alt="pexels-fauxels-3184183-2" border="0"></a>
 
 Acesse a apresentação do projeto no link abaixo: 
 https://www.canva.com/design/DAEjgrNJK8A/Wve7HcKbk0tN3hLU7NbbIA/view?utm_content=DAEjgrNJK8A&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink
