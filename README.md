@@ -9,8 +9,9 @@
 > Status: Em construção... 🚧  
 
 ## Contrato
+<h1 align="center">
 <a href="https://ibb.co/TPgTqnR"><img src="https://i.ibb.co/5sR9xzv/pexels-fauxels-3184183-2.jpg" alt="pexels-fauxels-3184183-2" border="0"></a>
-
+</h1>
 Acesse a apresentação do projeto no link abaixo: 
 https://www.canva.com/design/DAEjgrNJK8A/Wve7HcKbk0tN3hLU7NbbIA/view?utm_content=DAEjgrNJK8A&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink
 
