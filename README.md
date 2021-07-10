@@ -21,13 +21,12 @@ https://www.canva.com/design/DAEjgrNJK8A/Wve7HcKbk0tN3hLU7NbbIA/view?utm_content
 ```
 ## Sobre o Projeto
 
-O FoodInclusion é um sistema de gerenciamento de negócios voltados para o consumidor sensitivo.
+O FoodInclusion é um sistema de gerenciamento de negócios voltado para o consumidor sensitivo.
 
-Esta aplicação é uma API onde será possível complilar e gerenciar negócios certificados e seguros que atuam no fornecimento, produção e manipulação de alimentos próprios para pessoas que possuem algum tipo de restrição alimentar, considerado as nuances da contaminação cruzada, além das opções orgânicas para os optantes de alimentos saudáveis. 
+Esta aplicação é uma API onde será possível compilar e gerenciar negócios certificados e seguros que atuam no fornecimento, produção e manipulação de alimentos próprios para pessoas que possuem algum tipo de restrição alimentar, considerando as nuances da contaminação cruzada, além das opções orgânicas para os optantes de alimentos saudáveis. 
 
-A plataforma recebe o cadastro de negócios referenciando por ramo/nicho de atuação, utilizando-se do MongoDB como Banco de Dados NoSQL.  
+A plataforma é um CRUD desenvolvido em JavaScript e Node.js, onde recebe o cadastro de negócios referenciando por ramo/nicho de atuação, utilizando-se do MongoDB como Banco de Dados NoSQL.  
 ```
-
  ## 🚀 **Tecnologias e dependências**
 | Ferramenta | Descrição |
 | --- | --- |
@@ -77,19 +76,68 @@ A plataforma recebe o cadastro de negócios referenciando por ramo/nicho de atua
    |- 📄 LICENSE
    |- 📄 package-lock.json
    |- 📄 package.json
+   |- 📄 Procfile
    |- 📄 README.md
    |- 📄 server.js
 
 ```
-<br>
-<br>
-
-## 📌 **Instruções para instalação e contribuições no projeto**
 
 <br>
 <br>
 
 ## 🎯 **Rotas HTTP**
+
+## Retorna rota default da aplicação
+
+| Método HTTP  | Endpoint                     | Descrição                            |
+| ------------ | ---------------------------- | ------------------------------------ |
+| GET          | `http://localhost:3000/`     |  Mensagem de apresentação (Index)    |             |
+
+<br>
+
+## Manipulação das Rotas Branch:
+
+| Método HTTP  | Endpoint               | Descrição                                         |
+| ------------ | ---------------------- | ------------------------------------------------- |
+| GET          | `/branch`              | Retorna todos os ramos de negócios cadastrados    |
+| POST         | `/branch`              | Criar/cadastrar um ramo de negócio                |
+| PUT          | `/branch/:id`          | Atualizar/Substituir um ramo de negócio           |
+| DELETE       | `/branch/:id`          | Retorna a remoção de um ramo de negócio           |
+
+<br>
+
+## Manipulação das Rotas Market:
+
+
+| Método HTTP  | Endpoint               | Descrição                                         |
+| ------------ | ---------------------- | ------------------------------------------------- |
+| POST         | `/market`              | Criar/cadastrar um negócio                        |
+| GET          | `/market`              | Retorna todos os negócios cadastrados             |
+| POST         | `/market/city`         | Retorna todos os negócios de uma cidade           |
+| PUT          | `/market/:id`          | Atualizar/Substituir um negócio                   |
+| DELETE       | `/market/:id`          | Retorna a remoção de um negócio                   |
+
+<br>
+
+### Dados para Collection branch
+
+- id: autogerado e obrigatório
+- name: texto e obrigatório
+- createdIn: data gerada automaticamente e obrigatório
+### API deve retornar seguinte JSON:
+
+```jsx
+
+{
+    "_id": "60e6641fad68a207c0a24760",
+    "name": "Feira orgânica",
+    "createdIn": "2021-07-08T02:33:53.858Z",
+    "__v": 0
+}
+
+```
+<br>
+<br>
 
 ### Dados para Collection market
 
@@ -100,15 +148,22 @@ A plataforma recebe o cadastro de negócios referenciando por ramo/nicho de atua
 - branch: referencia do ramo de negócio cadastrado previamente obrigatório
 - createdIn: data gerada automaticamente e obrigatório
 
-<br>
-<br>
+### API deve retornar seguinte JSON:
 
-### Dados para Collection branch
+```jsx
 
-- _id: autogerado e obrigatório
-- name: texto e obrigatório
-- createdIn: data gerada automaticamente e obrigatório
+{
+    
+    "_id": "60e66618ad68a207c0a24773",
+    "name": "E.livre",
+    "description": "Confeitaria Inclusiva, Sem glúten, leite (APLV). Opções vegan, low carb e adoçadas com frutas, controle de contaminação cruzada.",
+    "city": "Recife",
+    "branch": "60e664dead68a207c0a2476c",
+    "createdIn": "2021-07-08T02:33:53.874Z",
+    "__v": 0
+}
 
+```
 <br>
 <br>
 
