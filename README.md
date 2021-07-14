@@ -113,7 +113,7 @@ A plataforma é um CRUD desenvolvido em JavaScript e Node.js, onde recebe o cada
 | ------------ | ---------------------- | ------------------------------------------------- |
 | POST         | `/market`              | Criar/cadastrar um negócio                        |
 | GET          | `/market`              | Retorna todos os negócios cadastrados             |
-| POST         | `/market/city`         | Retorna todos os negócios de uma cidade           |
+| GET          | `/market/city`         | Retorna todos os negócios de uma cidade           |
 | PUT          | `/market/:id`          | Atualizar/Substituir um negócio                   |
 | DELETE       | `/market/:id`          | Retorna a remoção de um negócio                   |
 
